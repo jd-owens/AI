@@ -1,0 +1,22 @@
+[
+  {
+    "record_id": "tech-001",
+    "answer": "Cloud computing allows for on-demand access to computing resources, like servers and storage, over the internet. This enables scalability and cost-efficiency for businesses."
+  },
+  {
+    "record_id": "tech-002",
+    "answer": "Artificial intelligence (AI) involves creating systems that can perform tasks requiring human intelligence, such as learning, problem-solving, and decision-making. Machine learning, a subset of AI, focuses on enabling computers to learn from data without explicit programming."
+  },
+    {
+    "record_id": "tech-003",
+    "answer": "Blockchain technology is a decentralized and distributed ledger that records transactions across many computers. Its immutability and transparency make it suitable for various applications, including cryptocurrencies and supply chain management."
+  },
+  {
+    "record_id": "tech-004",
+    "answer": "The Internet of Things (IoT) refers to the network of physical devices embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the internet. This allows for automation and remote monitoring in various industries."
+  },
+  {
+    "record_id": "tech-005",
+    "answer": "Cybersecurity encompasses the practices and technologies designed to protect computer systems, networks, and data from unauthorized access, damage, or theft. It involves measures like firewalls, encryption, and intrusion detection systems to safeguard digital assets."
+  }
+]

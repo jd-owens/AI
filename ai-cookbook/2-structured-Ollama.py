@@ -1,0 +1,44 @@
+import os
+from datetime import date 
+from openai import OpenAI
+from pydantic import BaseModel
+
+client = OpenAI(base_url="http://localhost:11434/v1", api_key=os.getenv("OPENAI_API_KEY"))
+
+# --------------------------------------------------------------
+# Step 1: Define the response format in a Pydantic model
+# --------------------------------------------------------------
+
+
+class CalendarEvent(BaseModel):
+    name: str
+    date: str
+    participants: list[str]
+
+currentdate = date.today()
+#print(currentdate)
+
+# --------------------------------------------------------------
+# Step 2: Call the model
+# --------------------------------------------------------------
+
+completion = client.beta.chat.completions.parse(
+    model="tinyllama",
+    messages=[
+        {"role": "system", "content": "Extract the event information."},
+        {
+            "role": "user",
+            "content": "Alice and Bob are going to a science fair on Friday.",
+        },
+    ],
+    response_format=CalendarEvent,
+)
+
+# --------------------------------------------------------------
+# Step 3: Parse the response
+# --------------------------------------------------------------
+
+event = completion.choices[0].message.parsed
+print(event.name)
+print(event.date)
+print(event.participants)
